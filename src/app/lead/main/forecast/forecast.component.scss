@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     padding: 5px 0;
     width: 100%;
@@ -35,6 +37,8 @@
     #cityAction {
       display: flex;
       justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       button {
         margin: 0 10px;
