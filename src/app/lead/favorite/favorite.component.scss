@@ -1,0 +1,26 @@
+#favorite {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  .dayForecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    min-height: 6rem;
+    width: 5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 5px;
+    cursor: pointer;
+    div {
+      margin: auto;
+    }
+  }
+}

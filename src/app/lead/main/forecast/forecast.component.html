@@ -1,0 +1,43 @@
+<div id="forecast" *ngIf="!!cityName">
+  <div id="cityArea">
+    <div id="cityValue">
+      <div id="cityAlone"></div>
+      <div>
+        <span>{{ cityName }}</span> <span>{{ cityTemp }}</span>
+      </div>
+    </div>
+
+    <div id="cityAction">
+      <mat-icon>favorite_border</mat-icon>
+      <button mat-raised-button (click)="toggleTypeTemperature()">
+        Change Temperature Type
+      </button>
+      <button mat-raised-button (click)="toggleFavorite()">
+        Add to Favorite
+      </button>
+    </div>
+  </div>
+  <div id="clouds">
+    <div>{{ cloudsType }}</div>
+  </div>
+  <div id="periodWeather" *ngIf="!!selectedForecast; else loading">
+    <div class="dayForecast" *ngFor="let day of selectedForecast">
+      <div>{{ day.Date | date: "EEEE" }}</div>
+
+      <div *ngIf="!toggleType">{{ day.Temperature.Maximum.Value }} F</div>
+
+      <div *ngIf="toggleType">
+        {{
+          ((+day.Temperature.Maximum.Value - 32) * 5.0) / 9.0 | number: "1.0-0"
+        }}
+        C
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div id="periodWeather">
+      <p style="text-align: center;">Loading...</p>
+    </div>
+  </ng-template>
+</div>

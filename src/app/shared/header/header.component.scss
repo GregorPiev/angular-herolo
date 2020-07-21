@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding: 10px 5px 20px 5px;
+  border-bottom: solid 1px #000000;
+  h1 {
+    font-size: 1rem;
+  }
+  .menu {
+    border: solid 2px #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    padding: 0 5px;
+    z-index: 5;
+    width: 170px;
+    height: 42px;
+    .buttonHome {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 2px;
+      width: 44%;
+    }
+    .buttonFavorite {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 2px;
+      margin-left: 75px;
+      width: 52%;
+    }
+  }
+  .mat-stroked-button {
+    background-color: #ffffff;
+    color: #000000;
+    outline: none;
+  }
+  .mat-raised-button.mat-primary {
+    background-color: rgba(204, 221, 255, 1);
+    zoom: 110%;
+    color: #000000;
+    z-index: 10;
+    outline: none;
+    top: -5px !important;
+    height: 46px;
+  }
+}

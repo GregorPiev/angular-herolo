@@ -1,0 +1,35 @@
+<mat-form-field class="example-form-field">
+  <mat-label>Enter City Name</mat-label>
+  <button
+    mat-button
+    matPrefix
+    mat-icon-button
+    aria-label="Send"
+    (click)="applyFilter()"
+  >
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <input
+    matInput
+    #input
+    type="text"
+    placeholder="Enter City Name"
+    [(ngModel)]="cityName"
+    (keydown.enter)="applyFilter()"
+  />
+
+  <button
+    mat-button
+    *ngIf="cityName"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="cityName = ''"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<mat-error *ngIf="errorMessage">
+  {{ errorMessage }}
+</mat-error>

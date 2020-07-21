@@ -1,0 +1,57 @@
+::ng-deep .mat-form-field-prefix {
+  position: relative;
+  top: -5px;
+}
+
+::ng-deep
+  .mat-form-field-appearance-legacy
+  .mat-form-field-suffix
+  .mat-icon-button {
+  position: relative;
+  top: -5px;
+}
+
+::ng-deep .mat-form-field {
+  font-size: 0.7rem;
+  border: solid 2px rgba(0, 0, 0, 0.7) !important;
+  border-radius: 5px;
+  width: 50%;
+  height: 55px;
+  margin: 0;
+  padding: 0;
+}
+
+::ng-deep .mat-input-element {
+  height: 25px;
+  width: 90%;
+  caret-color: #000000 !important;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: rgba(#bebebe, 0.7);
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #000000 !important;
+}
+
+::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+  caret-color: #000000 !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #000000 !important;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: 0 !important;
+  background-color: blue !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
+  height: 0 !important;
+  background-color: blue !important;
+}

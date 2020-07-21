@@ -1,0 +1,36 @@
+<div class="header">
+  <h1>Herolo Weather task</h1>
+  <div class="menu">
+    <button
+      class="buttonHome"
+      mat-raised-button
+      color="primary"
+      *ngIf="toggleMenu === 'home'; else homeBasic"
+    >
+      Home
+    </button>
+    <ng-template #homeBasic>
+      <button class="buttonHome" mat-stroked-button (click)="goToHome()">
+        Home
+      </button>
+    </ng-template>
+
+    <button
+      class="buttonFavorite"
+      mat-raised-button
+      color="primary"
+      *ngIf="toggleMenu === 'favorite'; else favoriteBasic"
+    >
+      Favorites
+    </button>
+    <ng-template #favoriteBasic>
+      <button
+        mat-stroked-button
+        class="buttonFavorite"
+        (click)="goToFavorites()"
+      >
+        Favorites
+      </button>
+    </ng-template>
+  </div>
+</div>

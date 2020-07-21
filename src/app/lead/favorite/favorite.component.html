@@ -1,1 +1,22 @@
-<p>favorite works!</p>
+<div id="favorite" *ngIf="favoriteForecast.length; else loading">
+  <div class="dayForecast" *ngFor="let item of favoriteForecast">
+    <div style="cursor: pointer;" (click)="showValues(item.cityName)">
+      {{ item.cityName }}
+    </div>
+    <div>{{ item.cityTemp }}C</div>
+    <div>{{ item.cloudsType }}</div>
+    <p style="text-align: right;">
+      <mat-icon
+        style="cursor: pointer;"
+        (click)="deleteFromFavorites(item.cityName)"
+        >delete</mat-icon
+      >
+    </p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div id="favorite">
+    <p style="text-align: center;">Loading....</p>
+  </div>
+</ng-template>
